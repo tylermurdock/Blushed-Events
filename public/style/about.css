@@ -1,0 +1,27 @@
+.aboutPage{
+  height:85%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.aboutPage img {
+  max-height: 350px;
+  justify-content: center;
+}
+
+.CourtneyColumn {
+  margin: auto;
+  padding: 10px;
+}
+
+.MiddleColumn {
+  margin: auto;
+  padding: 50px;
+}
+
+.WhitneyColumn {
+  margin: auto;
+  padding: 10px;
+
+}

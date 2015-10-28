@@ -1,0 +1,148 @@
+/*/////////cart page/////////*/
+.headerContainer{
+  text-align: center;
+}
+
+.timeDatePickerDiv{
+  display: flex;
+  justify-content: center;
+}
+
+.inputBoxInCart{
+margin: auto;
+width: 375px;
+/* border-color: black; */
+border-radius: 20px;
+border: 2px solid gray;
+border-right-color: lightgray;
+border-bottom-color: lightgray;
+cursor: pointer;
+text-align: center;
+padding: 5px 8px;
+
+}
+
+
+.calendarImageDiv{
+display: flex;
+justify-content: center;
+margin: 10px;
+cursor: pointer;
+}
+
+.bottomInputBoxInCart{
+width: 375px;
+/* border-color: black; */
+border-radius: 20px;
+}
+
+.cartPage{
+height: 100%;
+width: 100%;
+margin-bottom: 1%;
+}
+
+.cartContainer {height: 100%;
+max-width: 75%;
+margin: auto;
+display: flex;
+align-items: center;
+/*blend in background*/
+/*background-color: rgb(255, 250, 232); */
+/*kind of goldish*/
+/*background-color: rgba(255, 242, 190, 0.64);*/
+/*brighter bluish*/
+/*background-color: rgba(177, 243, 255, 0.89);*/
+/*light blue*/
+background-color: white;}
+
+.picColumn {
+height: 100%;
+width: 100%;
+text-align: center;
+}
+
+.picColumn img {
+  max-height: 300px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nameColumn {height: 100%;
+width: 100%;
+text-align: center;
+padding-left:3%;
+/*background-color: lightblue;*/}
+
+.quantityColumn {
+height: 100%;
+width: 30%;
+text-align: center;
+/*background-color: lightblue;*/}
+
+.priceColumn {
+height: 100%;
+width: 100%;
+text-align: center;
+/*background-color: lightblue;*/
+
+}
+
+.removeColumn {
+height: 100%;
+width: 100%;
+display: flex;
+justify-content: center;
+/* text-align: center; */
+/*background-color: lightblue;*/}
+
+.removeColumn:hover {
+cursor: pointer
+}
+
+.removeColumn img {
+margin: auto;
+height: 30px;
+display: flex;
+}
+
+.removeWordBox {
+text-align: center;
+margin: auto;
+}
+
+.removeImageBox{
+text-align: center;
+margin: auto;
+padding-right: 30%;
+}
+
+.totalLine {
+  max-width: 85%;
+  display: flex;
+  /* justify-content: center; */
+  margin: auto;
+  justify-content: space-between;
+  margin-left: 29%;
+  margin-right: 31%;
+}
+
+.cartPageLine {
+  max-width: 75%;
+}
+
+.dateScheduled {
+display: flex;
+}
+
+.totalPrice {
+}
+
+.proceedToCheckout button{
+display: flex;
+/* justify-content: center; */
+margin: auto;
+/*border-radius: 20px;*/
+
+}
