@@ -17,5 +17,13 @@
     "mongoose": "^4.1.11"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylermurdock/Blushed-Events.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tylermurdock/Blushed-Events/issues"
+  },
+  "homepage": "https://github.com/tylermurdock/Blushed-Events#readme"
 }

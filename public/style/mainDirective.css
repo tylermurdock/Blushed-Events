@@ -1,5 +1,3 @@
-
-
 #navbar {
     position: relative;
     top: 0;
@@ -8,15 +6,21 @@
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: rgb(255, 250, 232);
-    box-shadow: 5px 5px 10px #d9d9d9;
+    background-color: white;
+    /*box-shadow: 5px 5px 10px #d9d9d9;*/
 }
 
 .split5050 {
     position: relative;
-    width: 50%;
+    width: 60%;
+    padding-left: 5%;
 }
 
+.split5050Image {
+    position: relative;
+    width: 40%;
+    left: 15px;
+}
 #navbar ul {
 text-decoration: none;
 list-style: none;
@@ -26,6 +30,12 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 margin-right: 20%;
+}
+
+.condencedHeader{
+    position: relative;
+    right: 9%;
+    width: 100%;
 }
 
 .links {
@@ -56,9 +66,27 @@ margin-right: 20%;
     position: absolute;
 }
 
-.listDiv {display: flex;
+.listDiv {
+display: flex;
 top: 0px;
 left: 0px;
 right: 0px;
 bottom: 0px;
 margin: auto;
+}
+
+.footer{
+  height: 45px;
+  width: 100%;
+  background-color: #d7bf77;;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-shadow: 5px 6px 17px #d9d9d9;
+}
+
+.adminLink{
+position: absolute;
+top: 12px;
+right: 30px;
+}

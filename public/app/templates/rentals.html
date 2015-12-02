@@ -1,50 +1,61 @@
-<nav-bar></nav-bar>
-
-
-<div class="searchContainer">
-  category:
-  <md-select class="dropdown" name="category" ng-model="filterTerm.category">
-    <md-option value="">Any</md-option>
-    <md-option value="decoration">Decoration</md-option>
-    <md-option value="lighting">Lighting</md-option>
-    <md-option value="tablecloth">Tablecloth</md-option>
-  </md-select>
-
-  <div class="cartLink">
-      <a href="#/cart">Cart</a>
-  </div>
-</div>
-
-<!-- <a class='dropdown-button btn' data-activates='dropdown1' ng-model="filterTerm.category">Select</a>
- <ul id='dropdown1' class='dropdown-content' >
-   <li><a value="">Any</a></li>
-   <li><a value="decoration">Decoration</a></li>
-   <li><a value="lighting">Lighting</a></li>
-   <li><a value="tablecloth">Tablecloth</a></li>
- </ul> -->
-
-
-
-
-
-<div class="maincontainer">
-    <div ng-repeat="product in products | filter: filterTerm">
-        <div class="imagecontainer">
-
-            <div class="details"> {{product.name}}</div>
-
-            <div class="imageDiv"> <img class="productPic" ng-src="{{product.img}}"></img> </div>
-
-            <div class="bottomcontainer">
-
-                <div class="price"> ${{product.price}} </div>
-
-                <div  class="rentbutton">
-                    <button ng-if="!product.inCart" ng-click="addToCart(product)"><a hover addClass="productItem">Rent Now</a></button>
-                    <h6 ng-if="product.inCart">item in cart</h6>
-                </div>
-
-            </div>
-
+<div class="rentalsPage">
+   <div class="header">
+        <nav-bar></nav-bar>  
+   </div> 
+        
+    <div class="rentalsPageContent">
+    
+        <div class="searchContainer">
+        <md-input-container>
+        <label for="">category:</label>
+        <md-select class="dropdown" name="category" ng-model="filterTerm.category">
+            <md-option value="">Any</md-option>
+            <md-option value="decoration">Decoration</md-option>
+            <md-option value="lighting">Lighting</md-option>
+            <md-option value="tablecloth">Tablecloth</md-option>
+        </md-select>
+        </md-input-container>
+    
         </div>
+    
+        <!-- <a class='dropdown-button btn' data-activates='dropdown1' ng-model="filterTerm.category">Select</a>
+        <ul id='dropdown1' class='dropdown-content' >
+        <li><a value="">Any</a></li>
+        <li><a value="decoration">Decoration</a></li>
+        <li><a value="lighting">Lighting</a></li>
+        <li><a value="tablecloth">Tablecloth</a></li>
+        </ul> -->
+    
+    
+    
+    
+    
+        <div class="maincontainer">
+            <div ng-repeat="product in products | filter: filterTerm">
+                <div class="imagecontainer">
+    
+                    <div class="details"> {{product.name}}</div>
+    
+                    <div class="imageDiv"> <img class="productPic" ng-src="{{product.img}}"></img> </div>
+    
+                    <div class="bottomcontainer">
+    
+                        <div class="price"> ${{product.price}} </div>
+    
+                        <div  class="rentbutton">
+                            <button ng-if="!product.inCart" ng-click="addToCart(product)"><a hover addClass="productItem">Rent Now</a></button>
+                            <h6 ng-if="product.inCart">item in cart</h6>
+                        </div>
+    
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+    <div class="footer">
+        <footer-div></footer-div>
     </div>
+
+</div>        

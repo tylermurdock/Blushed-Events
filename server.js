@@ -1,23 +1,80 @@
-var bodyParser  = require('body-parser'),
-    cors        = require('cors'),
-    mongoose    = require('mongoose'),
-    express     = require('express'),
-    app         = express(),
-    session     = require('express-session'),
-    Products    = require('./server/controllers/ProductCtrl'),
-    CartCtrl    = require('./server/controllers/CartCtrl'),
-    aws         = require('aws-sdk'),
-    port        = 8787;
+var bodyParser      = require('body-parser'),
+    cors            = require('cors'),
+    mongoose        = require('mongoose'),
+    express         = require('express'),
+    session         = require('express-session'),
+    // passport        = require('passport'),
+    // FacebookStrategy= require('passport-facebook').Strategy,
+    Products        = require('./server/controllers/ProductCtrl'),
+    CartCtrl        = require('./server/controllers/CartCtrl'),
+    aws             = require('aws-sdk'),
+    // keys            = require('./server/keys'),
+    app             = express(),
+    
+    port            = 3000;
 
 
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(__dirname + '/public'));
+
 app.use(session({
-  secret: 'this is a really great secret',
+  secret: 'secretTime',
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
 }));
+
+
+// app.use(passport.initialize());
+// app.use(passport.session());
+
+// passport.use(new FacebookStrategy({
+//   clientID: '1522602994718614',
+//   clientSecret: '5b4f550e2177bf2f80c813566b2b547e',
+//   callbackURL: 'http://localhost:3000/auth/facebook/callback',  
+// }), function (token, refreshToken,profile, done) {
+//   return done(null, 
+//   {
+//       token: token,
+//       profile: profile
+//      });
+// });
+
+
+// app.get('/auth/facebook', passport.authenticate('facebook'));
+
+// app.get('/auth/facebook/callback', passport.authenticate('facebook', {
+//   successRedirect: '/me',
+//   failureRedirect: '/login'
+// }), function(req, res) {
+//     console.log(req.session);
+// });
+
+// passport.serializeUser(function(user, done) {
+//   done(null, user);
+// });
+
+// var requireAuth = function(req, res, next){
+//   if(req.isAuthenticated()){
+//     return next();
+//     }
+//     return res.redirect('/auth/facebook')
+// }
+
+// passport.deserializeUser(function(obj, done) {
+//   done(null, obj);
+// });
+
+// app.get('/me', requireAuth, function(req, res){
+//   var currentLoggedInUserOnSession = req.user;
+  
+//   res.send(currentLoggedInUserOnSession);
+// })
+
+
+
+
+
 
 
 ///RENTALS///

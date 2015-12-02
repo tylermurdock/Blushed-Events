@@ -1,5 +1,14 @@
 /*////////rentals page////////*/
 
+.rentalsPage{
+    min-height: 100%;
+    position: relative;
+}
+
+.rentalsPageContent{
+    padding-bottom: 45px;
+}
+
 .searchContainer {
   display: flex;
   justify-content: center;

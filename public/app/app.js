@@ -1,4 +1,4 @@
-angular.module('blushed', ['ngRoute', 'scDateTime', 'ngMaterial' ])
+angular.module('blushed', ['ngRoute', 'scDateTime', 'ngMaterial', 'ngAnimate'])
 .config(function($routeProvider) {
   $routeProvider
     .when('/', {
@@ -48,6 +48,10 @@ angular.module('blushed', ['ngRoute', 'scDateTime', 'ngMaterial' ])
     .when('/order',{
       templateUrl: 'app/templates/order.html',
       controller: 'orderCtrl'
+    })
+    .when('/login',{
+      templateUrl: 'app/templates/login.html',
+      controller: 'loginCtrl'
     })
     .otherwise('/');
 })

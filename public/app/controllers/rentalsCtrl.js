@@ -1,4 +1,4 @@
-angular.module('blushed').controller('rentalsCtrl', function($scope, $rootScope, cartService, cart, getProducts){
+angular.module('blushed').controller('rentalsCtrl', function($scope, cartService, cart, getProducts){
   // $scope.products = cartService.getProducts();
   $scope.products = getProducts;
   $scope.cartProducts = cart.data;
