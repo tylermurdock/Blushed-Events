@@ -29,8 +29,8 @@ app.use(session({
 // app.use(passport.session());
 
 // passport.use(new FacebookStrategy({
-//   clientID: '1522602994718614',
-//   clientSecret: '5b4f550e2177bf2f80c813566b2b547e',
+//   clientID: '',
+//   clientSecret: '',
 //   callbackURL: 'http://localhost:3000/auth/facebook/callback',  
 // }), function (token, refreshToken,profile, done) {
 //   return done(null, 
