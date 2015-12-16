@@ -81,9 +81,10 @@ passport.use(new GoogleStrategy({
 
 
 // passport.use(new FacebookStrategy({
-//   clientID: '1522602994718614',
-//   clientSecret: '5b4f550e2177bf2f80c813566b2b547e',
-//   callbackURL: 'http://localhost:3000/auth/facebook/callback',
+
+//   clientID: '',
+//   clientSecret: '',
+//   callbackURL: 'http://localhost:3000/auth/facebook/callback',  
 // }), function (token, refreshToken,profile, done) {
 //   return done(null,
 //   {
