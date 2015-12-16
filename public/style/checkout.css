@@ -1,3 +1,114 @@
 .checkoutPage{
-    height: 73%;
+    min-height: 100%;
+    position: relative;
+}
+
+
+.checkoutPageContent{
+    padding-bottom: 45px;
+}
+
+
+.checkoutPageContent div ::-webkit-input-placeholder{
+color:#595f71;
+}
+
+.checkoutPageContent input{
+    border: 1px solid #bfbfbf;
+}
+
+textarea {
+        border: 1px solid #bfbfbf;
+}
+
+
+.inBetween{
+    position: relative;
+}
+
+.pickUpDate{
+ padding-left: 26%;
+}
+
+.pickUpDate input{
+    width: 200px;
+}
+
+.pickUpAddress{
+ padding-left: 26%;
+}
+
+.paymentInfo{
+   padding-top: 20px;
+   display: flex;
+   flex-direction: column;
+padding-left: 26%;
+}
+
+.paymentInfo input{
+    width: 200px;
+    margin-left: 9.5%;
+}
+
+.contactInfo{
+    padding-top: 20px;
+    display: flex;
+   flex-direction: column;
+padding-left: 26%;
+}
+
+.contactInfo input{
+    width: 200px;
+}
+
+#name input{
+    margin-left: 2.5%;
+}
+
+#email input{
+   margin-left: 2.9%;
+}
+
+#phone input{
+        margin-left: .9%;
+}
+
+#notes textarea{
+    width: 198px;
+    height: 50px;
+    margin-left:3.4%;
+}
+
+#placeOrder{
+display: flex;
+justify-content: center;
+margin: 5% 5px;
+}
+
+
+.checkoutCartContainer{
+
+height: 325px;
+width: 500px;
+overflow: scroll;
+border: 1px solid #bfbfbf;
+align-self: center;
+}
+
+.adminCartCheckout{
+    margin: 10px;
+max-width: 95%;
+padding-left: 9%;
+}
+
+.withTotal{
+    z-index: ;
+position: absolute;
+top: 5%;
+left: 52%;
+}
+
+.checkoutTotalLine{
+position: absolute;
+right: 6%;
 }

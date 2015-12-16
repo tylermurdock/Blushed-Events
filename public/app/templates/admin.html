@@ -1,0 +1,67 @@
+<div class="adminPage">
+    <div class="header">
+        <div class="homeImageDiv">
+            <div>
+                <a href="#/home" class="homeContainsImage">
+                    <img class="homeNavImage" ng-src="img/finalLogo.png">
+                </a>
+            </div>
+        </div>
+
+        <div class="homeListDiv">
+            <ul>
+                <li class="links"><a href="#/about">about</a></li>
+                <li class="links"><a href="#/rentals">rentals</a></li>
+                <li class="links"><a href="#/contact">contact</a></li>
+                <li class="links"><a href="#/cart">cart</a></li>
+
+            </ul>
+        </div>
+        <div class="line"></div>
+    </div>
+
+    <div class="adminPageContent">
+        <div class="headerContainer">
+            <h1>Hello Admin</h1></div>
+        <div class="adminUpdateSection">
+            <div class="uploadProduct">
+                Upload a new product:
+                <input type="text" placeholder="name*" ng-model="newProduct.name">
+                <textarea id='description' type="text" placeholder="description" ng-model="newProduct.description"></textarea>
+                <input type="text" placeholder="price*" ng-model="newProduct.price">
+                <input type="text" placeholder="category*" ng-model="newProduct.category">
+                <input type="text" placeholder="theme" ng-model="newProduct.theme">
+                <input type="text" placeholder="color" ng-model="newProduct.color">
+                <input type="text" placeholder="image url*" ng-model="newProduct.img">              
+                <button ng-click="postProduct()">Upload</button>
+            </div>
+            <div class='verticalLine adminLine'></div>
+            <div class="adminRemoveProduct">
+
+                <div class="cartContainer adminCart" ng-repeat="product in products | filter: filterTerm">
+
+
+                    <div class="picColumn"> <img ng-src="{{product.img}}" /></div>
+
+                    <div class="nameColumn">{{product.name}}</div>
+
+                    <div class="priceColumn">${{product.price}}</div>
+
+
+                    <div class="removeColumn" ng-click="removeFromDatabase(product._id)" ng-mouseenter="removeShow=true" ng-mouseleave="removeShow=false">
+                        <div class="removeWordBox">remove</div>
+                        <div class="removeImageBox"><img src="img/removeButton.png" ng-show="removeShow" ng-click="removeFromCart(product)"></img>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <button class="orderListButton"><a href="#/orders">order list</a></button>
+    </div>
+
+    <div class="footer">
+        <footer-div>
+    </div>
+</div>

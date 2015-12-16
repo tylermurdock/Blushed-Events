@@ -1,0 +1,97 @@
+.ordersPage{
+	min-height: 100%;
+	position: relative;
+}
+
+.ordersPageContent{
+padding-bottom: 45px;
+}
+
+.dateContactProductContainer{
+	/*display: flex;*/
+	justify-content: center;
+	padding-right: 10px;
+	/*height: 100px;*/
+}
+
+.dateContactContainer{
+	display: flex;
+justify-content: center;
+}
+
+.contactsOrderProducts{
+	position: relative;
+left: 35%;
+}
+
+.pickUpDateBox{
+	border: solid .5px black;
+	width: 150px;
+	margin: 10px;
+	text-align: center;
+	align-self: center;
+	height: 80px;
+	display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.contactContainer{
+display: flex;
+align-self: center;
+	border: solid .5px black;
+	width: 60%;
+	height: 80px;
+}
+
+.contactContainer div{
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+	align-self: center;
+}
+
+.orderNotes{
+	overflow: scroll;
+}
+
+.orderProductsOuter{
+display: flex;
+/*justify-content: center;*/
+}
+
+.orderProductsInner{
+display: flex;
+margin: 5px 0px;
+margin-left: 35%;
+width: 51%;
+align-items: center;
+/*justify-content: center;*/
+/*border: solid .5px black;*/
+}
+
+.orderProductsInner div{
+
+
+}
+
+#rentalImg img{
+	max-height: 60px;
+}
+
+#rentalImg{
+	min-width: 13%;
+}
+
+#rentalName{
+width: 37%;
+	margin-left: 10px;
+}
+
+#rentalQty{
+width: 20%;
+}
+
+#rentalPrice{
+	width: 28%;
+}

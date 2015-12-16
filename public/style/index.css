@@ -18,7 +18,28 @@ html body    {
     font-style: normal;
     list-style: none;
     text-decoration: none;
+    -webkit-font-smoothing: initial;
     
+}
+
+input{
+    color: #595F72;
+}
+
+button{
+    color: #595F72;
+}
+
+button:hover{
+   color: #009FB7;
+}
+
+option{
+    color: #595F72;
+}
+
+a{
+    color: #595F72;
 }
 
 a:link{
@@ -32,6 +53,8 @@ a:visited{
 a:hover{
     color: #009FB7;
 }
+
+
 
 
 

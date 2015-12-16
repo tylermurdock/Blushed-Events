@@ -6,15 +6,15 @@
     <div class="rentalsPageContent">
     
         <div class="searchContainer">
-        <md-input-container>
-        <label for="">category:</label>
-        <md-select class="dropdown" name="category" ng-model="filterTerm.category">
-            <md-option value="">Any</md-option>
-            <md-option value="decoration">Decoration</md-option>
-            <md-option value="lighting">Lighting</md-option>
-            <md-option value="tablecloth">Tablecloth</md-option>
-        </md-select>
-        </md-input-container>
+        <input-container>
+        <label for="">Category:</label>
+        <select class="dropdown" name="category" ng-model="filterTerm.category">
+            <option value="">Any</option>
+            <option value="decoration">Decoration</option>
+            <option value="lighting">Lighting</option>
+            <option value="tablecloth">Tablecloth</option>
+        </select>
+        </input-container>
     
         </div>
     
@@ -44,7 +44,7 @@
     
                         <div  class="rentbutton">
                             <button ng-if="!product.inCart" ng-click="addToCart(product)"><a hover addClass="productItem">Rent Now</a></button>
-                            <h6 ng-if="product.inCart">item in cart</h6>
+                            <div ng-if="product.inCart">item in cart</div>
                         </div>
     
                     </div>

@@ -1,4 +1,5 @@
-
+<date-picker-model class='datePickerModelOnCart' ng-show="showDatePicker" datesaved="datesaved">
+</date-picker-model>
 <div class="cartPage">
     <div class="header">
         <nav-bar></nav-bar>
@@ -6,48 +7,53 @@
 
     <div class="cartPageContent">
 
-        <div class="headerContainer">
-          <h1>Your Cart({{cartProducts.length}})</h1>
+        <div class="helloUser">
+            Hello, {{authUser.displayName}}
         </div>
 
+        <div class="headerContainer">
+            <h1>Your Cart({{cartProducts.length}})</h1>
+        </div>
+        
 
         <div class="inputBoxDiv">
-          <!-- <input class="inputBoxInCart" placeholder="Pick a day to start renting your items" type="datetime" name="name" value="pickDate" ng-model="dateValue" ng-focus="showDatePicker=true"> -->
+            <!-- <input class="inputBoxInCart" placeholder="Pick a day to start renting your items" type="datetime" name="name" value="pickDate" ng-model="dateValue" ng-focus="showDatePicker=true"> -->
             <div class="inputBoxInCart" ng-click="showDatePicker = true">
-                <!-- <img src="img/glyphicons_045_calendar.png" ng-click="showDatePicker=true"/> -->
-                <i class="fa fa-calendar"></i> {{ (dateValue | date:'MM/dd/yyyy h:mm a') || 'Pick a day to start renting your items'}}
+
+                <i class="fa fa-calendar"></i> {{ (startDate) || 'Pick a day to start renting your items'}}
             </div>
         </div>
 
-        <div class="calendarImageDiv">
-        </div>
+        <div class="calendarImageDiv"></div>
 
-            <!-- <form class="" action="index.html" method="post" name="form"> -->
-            <div class="timeDatePickerDiv">
-                <time-date-picker name="dateValue" ng-model="dateValue" ng-show="showDatePicker" dateshow="showDatePicker" datesaved="datesaved"></time-date-picker>
-            </div>
 
+        <!--<div class="datePickerDiv" name="dateValue" ng-model="dateValue" ng-show="showDatePicker" dateshow="showDatePicker" datesaved="datesaved">
+
+                    <md-datepicker ng-model="dateValue" md-placeholder="Enter date"></md-datepicker>
+
+            </div>-->
 
         <div class="productSection" ng-repeat='product in cartProducts track by $index'>
-          <div class="cartContainer">
+            <div class="cartContainer">
 
 
-            <div class="picColumn"> <img ng-src="{{product.img}}"/></div>
+                <div class="picColumn"> <img ng-src="{{product.img}}" /></div>
 
-            <div class="nameColumn">{{product.name}}</div>
+                <div class="nameColumn">{{product.name}}</div>
 
-            <input class="quantityColumn" type="number" ng-change="updateCart(product)" ng-model="product.qty"/>
+                <input class="quantityColumn" type="number" ng-change="updateCart(product)" ng-model="product.qty" />
 
-            <div class="priceColumn">${{product.totalPrice}}</div>
+                <div class="priceColumn">${{product.totalPrice}}</div>
 
 
-            <div class="removeColumn" ng-click="removeFromCart(product, $index)" ng-mouseenter="removeShow=true" ng-mouseleave="removeShow=false">
-              <div class="removeWordBox">remove</div>
-              <div class="removeImageBox"><img src="img/removeButton.png" ng-show="removeShow" ng-click="removeFromCart(product)"></img></div>
+                <div class="removeColumn" ng-click="removeFromCart(product, $index)" ng-mouseenter="removeShow=true" ng-mouseleave="removeShow=false">
+                    <div class="removeWordBox">remove</div>
+                    <div class="removeImageBox"><img src="img/removeButton.png" ng-show="removeShow" ng-click="removeFromCart(product)"></img>
+                    </div>
+                </div>
             </div>
-          </div>
-
         </div>
+
         <br>
         <br>
 
@@ -58,20 +64,21 @@
 
             <hr class="cartPageLine">
 
-            <div class="totalLine" >
-                
-                  <div class="dateScheduled">
-                    <div class="inputBoxInCart" ng-click="showDatePicker = true">{{ (dateValue | date:'MM/dd/yyyy h:mm a') || 'Date Scheduled: Must have rental date selected'}}</div>
-                  </div>
+            <div class="totalLine">
+
+                <div class="dateScheduled">
+                    <div class="inputBoxInCart" ng-click="showDatePicker = true">{{ (startDate) || 'Must have rental date selected'}}</div>
+                </div>
             </div>
-                <div class="totalPrice">
-                    Total: $ <td>{{total}}</td>
-                </div>
-                <div class="proceedToCheckout">
-                  <md-button class="md-raised" name="proceed" ng-click="enableProceedButton()" ng-disabled="!dateValue">Proceed to Checkout</md-button>
-                </div>
-                <br>
-                <br>
+            <div class="totalPrice">
+                Total: $
+                <td>{{total}}</td>
+            </div>
+            <div class="proceedToCheckout">
+                <button class="md-raised" name="proceed" ng-click="enableProceedButton()" ng-disabled="!startDate">Proceed to Checkout</button>
+            </div>
+            <br>
+            <br>
         </div>
     </div>
     <div class="footer">

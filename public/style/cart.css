@@ -1,22 +1,38 @@
 /*/////////cart page/////////*/
 .cartPage{
+    z-index: 1;
     min-height: 100%;
     position: relative;
+
 }
 
 .cartPageContent{
-    height: 100%;
-    padding-bottom: 200px;
+    /*padding-bottom: 200px;*/
 }
+
+
 
 .headerContainer{
   text-align: center;
+
 }
+
+.helloUser{
+    position: absolute;
+right: 7%;
+top: 115px;
+}
+
+.inputBoxDiv{
+
+}
+
 
 .timeDatePickerDiv{
   display: flex;
   justify-content: center;
 }
+
 
 .inputBoxInCart{
 margin: auto;
@@ -41,6 +57,20 @@ margin: 10px;
 cursor: pointer;
 }
 
+  .datepickerdemoBasicUsage md-content {
+    padding-bottom: 200px; }
+  .datepickerdemoBasicUsage .validation-messages {
+    font-size: 11px;
+    color: darkred;
+    margin: 10px 0 0 25px; }
+
+.datePickerDiv{
+    display: flex;
+    justify-content: center;
+    padding-right: 2%;
+}
+
+
 .bottomInputBoxInCart{
 width: 375px;
 /* border-color: black; */
@@ -52,18 +82,12 @@ width: 100%;
 margin-bottom: 1%;
 }
 
+
 .cartContainer {
 max-width: 75%;
 margin: auto;
 display: flex;
 align-items: center;
-/*blend in background*/
-/*background-color: rgb(255, 250, 232); */
-/*kind of goldish*/
-/*background-color: rgba(255, 242, 190, 0.64);*/
-/*brighter bluish*/
-/*background-color: rgba(177, 243, 255, 0.89);*/
-/*light blue*/
 background-color: white;}
 
 .picColumn {
@@ -130,11 +154,11 @@ padding-right: 30%;
 
 
 .cartPageLineDiv {
-margin-bottom: 35px;
+/*margin-bottom: 35px;*/
 }
 
 .cartPageLine {
-  max-width: 75%;
+  max-width: 89%;
 }
 
 .totalLine {
@@ -162,23 +186,7 @@ margin: 5px;
 display: flex;
 /* justify-content: center; */
 margin: auto;
+margin-bottom: 10px;
 /*border-radius: 20px;*/
-
 }
 
-.cartFooter{
-    height: 75px;
-    width: 100%;
-    background-color: rgb(255, 250, 232);
-    box-shadow: 5px 6px 17px #d9d9d9;
-    margin-top: 10px;
-    position: relative;
-}
-
-.footers{
-    width: 100%;
-    position: absolute;
-    margin: 10px;
-    bottom: 0;
-    left: 0;
-}

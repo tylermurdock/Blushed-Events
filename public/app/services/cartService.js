@@ -1,90 +1,18 @@
 angular.module("blushed").service("cartService", function($http) {
 
   this.total = 0;
-  // var products =  [
-  //         {
-  //             img: 'img/whiteChest.jpg',
-  //             name: "White Chest",
-  //             price: 10000,
-  //             category: "decoration",
-  //             quantity: 1,
-  //             id: 1
-  //         },
-  //         {
-  //             img: 'img/bucketList.jpg',
-  //             name: "Bucket List",
-  //             price: 20,
-  //             category: "decoration",
-  //             quantity: 1,
-  //             id: 2
-  //         },
-  //         {
-  //             img: 'img/mrAndMrsSigns.jpg',
-  //             name: "Mr and Mrs Signs",
-  //             price: 57,
-  //             category: "decoration",
-  //             quantity: 1,
-  //             id: 3
-  //         },
-  //         {
-  //             img: 'img/chalkSigns.jpg',
-  //             name: "Chalk Signs",
-  //             price: 80000,
-  //             category: "decoration",
-  //             quantity: 1,
-  //             id: 4
-  //         },
-  //         {
-  //             img: 'img/beachJars.jpg',
-  //             name: "Beach Jars",
-  //             price: 6000,
-  //             category: "decoration",
-  //             quantity: 1,
-  //             id: 5
-  //         },
-  //         {
-  //             img: 'img/seashells.jpg',
-  //             name: "Seashells",
-  //             price: 100,
-  //             category: "lighting",
-  //             quantity: 1,
-  //             id: 6
-  //         },
-  //         {
-  //             img: 'img/seashellFrames.jpg',
-  //             name: "Seashell Frames",
-  //             price: 2000,
-  //             category: "tablecloth",
-  //             quantity: 1,
-  //             id: 7
-  //         }
-  //     ];
+ 
       // this.dateValue;
       this.dateScheduled = function(date){
-          this.dateValue = date;
+          this.startDate = date;
       };
 
       this.getProducts = function(){
         // return products;
         return $http({
             method: 'GET',
-            url: '/rentals',
+            url: '/api/products',
           });
-
-        // var deferred = $q.defer();
-        //
-        // $http({
-        //     method: 'GET',
-        //     url: '/rentals',
-        //   }).then(function(res) {
-        //     console.log(res);
-        //     deferred.resolve(res.data);
-        //   }, function(err) {
-        //     console.log(err);
-        //     deferred.reject(err);
-        //   });
-        //
-        //   return deferred.promise;
       };
 
       var cart = [];
@@ -126,25 +54,13 @@ angular.module("blushed").service("cartService", function($http) {
         });
       };
 
-      // this.getTotal = function(){
-      //   for(var i = 0; i < cart.length; i++){
-      //     this.total += cart[i].price;
-      //   }
-      //   return this.total;
-      // }.bind(this);
-
-      // this.enableProceedButton = function(){
-      //   if()
-      // }
-
-      // this.setCartCookie = function(){
-      //   return $http.post('/api/setCookie', {testProduct: "this is a test product"});
-      // };
-      //
-      // this.getCartCookie = function(){
-      //   return $http.get('/api/getCookie').then(function(res){console.log(res);});
-      // };
-
-
+      this.placeOrder = function(order){
+          return $http({
+              method: 'POST',
+              url: '/api/orders',
+              data: order
+          });
+      };
 
 });
+ 

@@ -1,6 +1,61 @@
-<div>
-	<div>
-		<input type="text" placeholder="username">
-		<input type="text" placeholder="password">
-	</div>
+
+<div id="indexPage">
+
+    <div class="header">
+
+        <div class="homeImageDiv">
+            <div>
+             <a href="#/home" class="homeContainsImage">
+               <img class="homeNavImage" ng-src="img/finalLogo.png">
+             </a>
+            </div>
+        </div>
+
+        <div class="homeListDiv">
+            <ul>
+                <li class="links"><a href="#/about">about</a></li>
+                <li class="links"><a href="#/rentals">rentals</a></li>
+                <li class="links"><a href="#/contact">contact</a></li>
+                <li class="links"><a href="#/cart">cart</a></li>
+
+            </ul>
+        </div>
+        <div class="line"></div>
+    </div>
+
+    <div class="indexPageContent">
+
+		<div class="inputContainers">
+			<div class='loginContainer'>
+                Login:
+                <div class='inputBoxes'>
+                    <!--<input type="text" placeholder="email">
+                    <input type="text" placeholder="password">-->
+                    <a href="/auth/google"><button class="signInButton"><i class="fa fa-google-plus-square fa-3x"></i></button></a>
+                </div>
+			</div>
+            
+            
+            <div class='verticalLine'>
+                
+            </div>
+            <div class='signUpContainer'>
+                Sign up:
+                <div class='inputBoxes'>
+                    <!--<input type="text" placeholder="username">
+                    <input type="text" placeholder="email">
+                    <input type="text" placeholder="password">
+                    <input type="text" placeholder="verify password">-->
+                </div>
+            </div>
+		</div>
+
+
+    </div>
+
+    <div class="footer">
+      <footer-div></footer-div>
+
+    </div>
+
 </div>

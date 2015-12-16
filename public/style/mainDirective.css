@@ -75,6 +75,10 @@ bottom: 0px;
 margin: auto;
 }
 
+
+
+/*/////////// FOOTER ////////////*/
+
 .footer{
   height: 45px;
   width: 100%;
@@ -87,6 +91,100 @@ margin: auto;
 
 .adminLink{
 position: absolute;
-top: 12px;
+top: 10px;
 right: 30px;
 }
+
+
+/*////////////// DATE PICKER MODEL /////////////*/
+
+.modelPage{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: black;
+    opacity: 0.8;
+}
+
+
+.datePickerModel{
+    position: fixed;
+z-index: 3;
+height: 400px;
+max-width: 600px;
+background-color: white;
+border: solid #595f71;
+flex-direction: column;
+top: 135px;
+left: 28%;
+right: 28%;
+}
+
+h1{
+    text-align: center;
+}
+
+.myDatePicker{
+    display: flex;
+    justify-content: center;
+    /*margin-bottom: 160px;*/
+}
+
+.myDatePicker input{
+    text-align: center;
+}
+
+div#ui-datepicker-div.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all{
+    left: 552.1875px !important;
+}
+
+.modelImage{
+    width: 400px;
+}
+
+.modelImageDiv{
+display: flex;
+justify-content: center;
+margin: 30px 30px 20px 30px;
+}
+
+
+/*.dateDropdowns{
+    display: flex;
+flex-direction: column;
+text-align: center;
+margin: 0px 30px 30px 30px;
+}
+
+.dateDropdowns select{
+    width: 200px;
+    margin: 5px auto;
+}*/
+
+.modelBottom{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.cartModelButtons{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+p{
+    text-align: center;
+}
+
+.cartModelButtons button{
+    width:80px;
+}
+
+.cancelButton{
+    margin-right: 10px;
+}
+

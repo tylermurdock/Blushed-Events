@@ -1,35 +1,98 @@
-<nav-bar></nav-bar>
-
-
+<date-picker-model class='datePickerModelOnCart' ng-show="showDatePicker" datesaved="datesaved"></date-picker-model>
 <div class="checkoutPage">
-  <h1>Proceed To Checkout</h1>
-  <div class="">
-    Pick up date: {{dateValue | date:'MM/dd/yyyy h:mm a'}}
-  </div>
-  <div class="">
-    Pick up address: 1234 ThisSiteRocks Dr.
-  </div>
-  <div class="">
-    Payment Info:
-      <input type="text" name="name" value="">
-      <input type="text" name="name" value="">
-      <input type="text" name="name" value="">
-      <input type="text" name="name" value="">
-  </div>
 
-  <div class="">
-    So everything runs smoothly the day of your rentals please enter your contact info here.
-    Contact Info:
+    <div class="header">
 
-    Name:<input type="text" name="name" value="">
-    Email:<input type="text" name="name" value="">
-    Phone #:<input type="text" name="name" value="">
-    <br>
-    <br>
-    <br>
-    <button type="button" name="placeOrder" onclick="location.href='order.html'">Place Order</button>
-  </div>
+    </div>
+    <nav-bar></nav-bar>
+
+
+    <div class="checkoutPageContent">
+
+        <h1>Proceed To Checkout</h1>
+        <div class="inBetween">
+            <div class="inputInfoSection">
+                <div class="pickUpDate">
+                    Pick up Date:
+                    <input type="text" ng-click="showDatePicker = true" placeholder="{{startDate}}" ng-model="startDate" maxlength="10" minlength="7">
+                </div>
+                <div class="pickUpAddress">
+                    Pick up address: 1234 ThisSiteRocks Dr.
+                </div>
+                <div class="paymentInfo">
+                    Payment Info:
+                    <input type="text" >
+                    <input type="text" >
+                    <input type="text" >
+                    <input type="text" >
+                </div>
+
+                <div class="contactInfo">
+                    <div>
+                        Contact Info:
+                    </div>
+
+                    <div id="name">&nbsp &nbsp*Name:
+                        <input type="text" ng-model='newOrder.name'>
+                    </div>
+
+                    <div id="email">&nbsp &nbsp*Email:
+                        <input type="email" ng-model='newOrder.email'>
+                    </div>
+
+                    <div id="phone">&nbsp &nbsp*Phone #:
+                        <input type="text" ng-model='newOrder.phoneNumber'>
+                    </div>
+                    
+                    <div id="notes">&nbsp &nbspNotes:
+                        <textarea type="text" ng-model='newOrder.notes' ></textarea>
+                    </div>
+
+                </div>
+            </div>
+
+
+<div class="withTotal" >
+    
+            <div class="checkoutCartContainer">
+
+                <div class="cartContainer adminCartCheckout" ng-repeat="product in cartProducts track by $index">
+
+
+                    <div class="picColumn"> <img ng-src="{{product.img}}" /></div>
+
+                    <div class="nameColumn">{{product.name}}</div>
+
+                    <div class="quantityColumn">{{product.qty}} </div>
+
+                    <div class="priceColumn">${{product.price}}</div>
+
+
+                    <!--<div class="removeColumn" ng-click="removeFromDatabase(product._id)" ng-mouseenter="removeShow=true" ng-mouseleave="removeShow=false">
+                        <div class="removeWordBox">remove</div>
+                        <div class="removeImageBox"><img src="img/removeButton.png" ng-show="removeShow" ng-click="removeFromCart(product)"></img>
+                        </div>
+                    </div>-->
+                </div>
+
+            </div>
+            <div class="checkoutTotalLine">
+                Total ${{total}}
+            </div>
+</div>
+        </div>
+
+
+
+        <div id="placeOrder">
+            <button type="button" name="placeOrder" ng-click="placeOrder()" >Place Order</button>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <footer-div></footer-div>
+
+    </div>
 
 </div>
-
-<footer-div></footer-div>

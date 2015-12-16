@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <title>Blushed Events</title>
 
-    <!--<link rel='stylesheet' href='bower_components/font-awesome/css/font-awesome.min.css'>-->
-    <!--<link rel='stylesheet' href='bower_components/angular-material/angular-material.min.css'>-->
+    <link rel='stylesheet' href='bower_components/font-awesome/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='bower_components/angular-material/angular-material.min.css'>
     <!--<link rel='stylesheet' href='bower_components/sc-date-time/dist/sc-date-time.css'>-->
-
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
     <!--<link rel='stylesheet' href='bower_components/Materialize/bin/materialize.css'>-->
@@ -21,38 +21,33 @@
     <link rel="stylesheet" href="style/checkout.css">
     <link rel="stylesheet" href="style/contact.css">
     <link rel="stylesheet" href="style/mainDirective.css">
-
-
+    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="style/admin.css">
+    <link rel="stylesheet" href="style/orders.css">
+    
   </head>
   <body ng-controller = 'homeCtrl'>
 
     <ng-view></ng-view>
 
-<!-- </div> -->
 
 
 
 
-<!--
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="/resources/materialize/js/materialize.min.js"></script> -->
 
+
+    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
     <script src="bower_components/angular-material/angular-material.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-    <script src='/bower_components/sc-date-time/dist/sc-date-time.js'></script>
+
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script> -->
-
-    <!-- <script src="bower_components/angular-carousel/dist/angular-touch.js"></script> -->
-    <!-- <script src="bower_components/angular-carousel/dist/angular-carousel.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    <!--<script src="bower_components/Materialize/dist/js/materialize.min.js"></script>-->
 
 
-    <script src="bower_components/Materialize/dist/js/materialize.min.js"></script>
-
-    <!-- <script src="/bower_components/Materialize/js/slider.js"></script> -->
 
 
     <script src="app/app.js"></script>
@@ -63,10 +58,15 @@
     <script src="app/services/cartService.js"></script>
     <script src="app/controllers/cartCtrl.js"></script>
     <script src="app/controllers/checkoutCtrl.js"></script>
-    <script src="app/controllers/orderCtrl.js"></script>
+    <script src="app/controllers/ordersCtrl.js"></script>
     <script src="app/directives/mainDirective.js"></script>
+    <script src="app/controllers/loginCtrl.js"></script>
+    <script src="app/services/authService.js"></script>
+    <script src="app/controllers/adminCtrl.js"></script>
+    <script src="app/controllers/thankYouCtrl.js"></script>
+    
 
 
-    <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
+
     </body>
 </html>
