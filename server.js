@@ -7,7 +7,7 @@ var bodyParser = require('body-parser'),
     // FacebookStrategy= require('passport-facebook').Strategy,
     
     aws = require('aws-sdk'),
-    // keys            = require('./server/keys'),
+    GoogleKeys            = require('./server/keys'),
     app = express(),
     port = 8787,
     GoogleStrategy = require('passport-google-oauth').OAuth2Strategy,
@@ -46,8 +46,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 passport.use(new GoogleStrategy({
-    clientID: '984022701109-amba6rvbl0ki4nlkfreqib8hoa9tck1k.apps.googleusercontent.com',
-    clientSecret: 'uj9xwH25oYdSxvqWffNiJpBy',
+    clientID: 'GoogleKeys.googleId',
+    clientSecret: 'GoogleKeys.googlesecret',
     callbackURL: "http://localhost:8787/auth/google/callback"
 },
     function (accessToken, refreshToken, profile, done) {
