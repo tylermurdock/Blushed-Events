@@ -1,4 +1,4 @@
-angular.module("blushed").controller("cartCtrl", function ($scope, cartService, cart, authService) {
+angular.module("blushed").controller("cartCtrl", function ($scope, $rootScope, cartService, cart, authService) {
 
 
   
@@ -13,10 +13,10 @@ angular.module("blushed").controller("cartCtrl", function ($scope, cartService, 
 
     $scope.getAuthUser();
 
-    $scope.cartProducts = cart.data;
+    $rootScope.cartProducts = cart.data;
 
 
-    $scope.calculateTotal = function () {
+    $rootScope.calculateTotal = function () {
         $scope.total = 0;
         for (var i = 0; i < $scope.cartProducts.length; i++) {
             $scope.cartProducts[i].totalPrice = $scope.cartProducts[i].price * $scope.cartProducts[i].qty;
@@ -24,7 +24,7 @@ angular.module("blushed").controller("cartCtrl", function ($scope, cartService, 
         }
     };
 
-    $scope.calculateTotal();
+    $rootScope.calculateTotal();
 
 
     $scope.removeFromCart = function (product, $index) {
