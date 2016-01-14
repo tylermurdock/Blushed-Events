@@ -6,7 +6,7 @@ var bodyParser = require('body-parser'),
     passport = require('passport'),
     aws = require('aws-sdk'),
     app = express(),
-    port = 8787,
+    port = process.env.PORT || 8787,
     GoogleStrategy = require('passport-google-oauth').OAuth2Strategy,
     GoogleKeys            = require('./server/keys'),
     
@@ -196,7 +196,7 @@ app.get('/api/orders', OrderCtrl.read);
 //////////// CONNECTIONS ////////////
 
 
-var mongoURI = 'mongodb://localhost:27017/blushed';
+var mongoURI = 'mongodb://tylermurdock:hustle21@ds045465.mongolab.com:45465/blushed-events';
 mongoose.set('debug', true);
 mongoose.connect(mongoURI);
 mongoose.connection.once('open', function () {
