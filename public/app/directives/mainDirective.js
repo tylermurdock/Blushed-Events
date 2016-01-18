@@ -75,7 +75,7 @@ angular.module('blushed')
     .directive('datepicker', function () {
             return {
                 link: function (scope, el, attr) {
-                    $(el).datepicker({
+                    el.datepicker({
                         onSelect: function (dateText) {
                             console.log(dateText);
                             var expression = attr.ngModel + " = " + "'" + dateText + "'";
