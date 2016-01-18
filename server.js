@@ -47,7 +47,7 @@ app.use(passport.session());
 passport.use(new GoogleStrategy({
     clientID: process.env.googleId,
     clientSecret: process.env.googleSecret,
-    callbackURL: "http://localhost:8787/auth/google/callback"
+    callbackURL: "/auth/google/callback"
 },
     function (accessToken, refreshToken, profile, done) {
         var query = { 'google.id': profile.id };
