@@ -47,7 +47,7 @@ app.use(passport.session());
 passport.use(new GoogleStrategy({
     clientID: process.env.googleId,
     clientSecret: process.env.googleSecret,
-    callbackURL: "http://blushed-events.herokuapp.com/auth/google/callback"
+    callbackURL: "/auth/google/callback"
 },
     function (accessToken, refreshToken, profile, done) {
         var query = { 'google.id': profile.id };
@@ -129,7 +129,7 @@ app.get('/auth/google', passport.authenticate('google', {
 }));
 
 app.get('/auth/google/callback', passport.authenticate('google', {
-    successRedirect: '/#/admin',
+    successRedirect: '/admin',
     failure: '/'
 }));
 
