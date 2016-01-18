@@ -8,7 +8,7 @@ var bodyParser = require('body-parser'),
     app = express(),
     port = process.env.PORT || 8787,
     GoogleStrategy = require('passport-google-oauth').OAuth2Strategy,
-    GoogleKeys            = require('./server/keys'),
+    // GoogleKeys            = require('./server/keys'),
     
     // FacebookStrategy= require('passport-facebook').Strategy,
     
@@ -45,8 +45,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 passport.use(new GoogleStrategy({
-    clientID: GoogleKeys.GoogleKeys.googleId,
-    clientSecret: GoogleKeys.GoogleKeys.googleSecret,
+    clientID: process.env.googleId,
+    clientSecret: process.env.googleSecret,
     callbackURL: "http://localhost:8787/auth/google/callback"
 },
     function (accessToken, refreshToken, profile, done) {
