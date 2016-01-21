@@ -1,3 +1,24 @@
-#contactPage{
-  height: 73%;
+.contactPage{
+     min-height: 100%;
+    position: relative;
 }
+
+.contactPageContent{
+    padding-bottom: 45px;
+        text-align: center;
+        margin: 50px;
+}
+
+.fa.fa-phone{
+    font-size: 25px;
+    margin: 10px;
+
+}
+
+.email{
+        font-size: 20px;
+}
+
+
+
+
